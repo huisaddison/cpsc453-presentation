@@ -1,0 +1,96 @@
+\documentclass[xetex,mathserif,serif]{beamer}
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{color}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{blkarray}
+\usepackage{multicol}
+\usepackage{relsize}
+
+\definecolor{solarized@base03}{HTML}{002B36}
+\definecolor{solarized@base02}{HTML}{073642}
+\definecolor{solarized@base01}{HTML}{586e75}
+\definecolor{solarized@base00}{HTML}{657b83}
+\definecolor{solarized@base0}{HTML}{839496}
+\definecolor{solarized@base1}{HTML}{93a1a1}
+\definecolor{solarized@base2}{HTML}{EEE8D5}
+\definecolor{solarized@base3}{HTML}{FDF6E3}
+\definecolor{solarized@yellow}{HTML}{B58900}
+\definecolor{solarized@orange}{HTML}{CB4B16}
+\definecolor{solarized@red}{HTML}{DC322F}
+\definecolor{solarized@magenta}{HTML}{D33682}
+\definecolor{solarized@violet}{HTML}{6C71C4}
+\definecolor{solarized@blue}{HTML}{268BD2}
+\definecolor{solarized@cyan}{HTML}{2AA198}
+\definecolor{solarized@green}{HTML}{859900}
+\definecolor{yaleblue}{HTML}{0E4C92}
+
+\newcommand{\yellow}[1]{\textcolor{solarized@yellow}{#1}}
+\newcommand{\orange}[1]{\textcolor{solarized@orange}{#1}}
+\newcommand{\red}[1]{\textcolor{solarized@red}{#1}}
+\newcommand{\magenta}[1]{\textcolor{solarized@magenta}{#1}}
+\newcommand{\violet}[1]{\textcolor{solarized@violet}{#1}}
+\newcommand{\blue}[1]{\textcolor{solarized@blue}{#1}}
+\newcommand{\cyan}[1]{\textcolor{solarized@cyan}{#1}}
+\newcommand{\green}[1]{\textcolor{solarized@green}{#1}}
+\newcommand{\yblue}[1]{\textcolor{yaleblue}{#1}}
+
+\setbeamertemplate{navigation symbols}{}
+% \setbeamerfont{title}{family=\old}
+% \setbeamerfont{author}{family=\tfont}%
+% \setbeamerfont{frametitle}{family=\oldA}
+% \setbeamerfont{date}{family=\dfont}
+
+% \addtobeamertemplate{navigation symbols}{}{%
+%     \usebeamerfont{footline}%
+%     \usebeamercolor[fg]{footline}%
+%     \hspace{1em}%
+%     \insertframenumber/\inserttotalframenumber
+% }
+
+\setbeamertemplate{footline}[text line]{%
+  \parbox{0.99\linewidth}{
+    \normalsize\vspace*{-24pt}\hfill{\color{solarized@base00}\insertframenumber/\inserttotalframenumber}
+  }
+}
+
+
+\setbeamertemplate{itemize items}{--}
+\setbeamercolor*{item}{fg=black}
+
+\defaultfontfeatures{Mapping=tex-text}
+\hypersetup{pdfstartview={FitH}}
+
+\newcommand{\old}[1]{\fontspec[Alternate=1,Ligatures={Common}]{Hoefler Text}\fontsize{18pt}{30pt}\selectfont #1}%
+\newcommand{\oldA}[1]{\fontspec[Alternate=1,Ligatures={Common, Rare}]{Hoefler Text}\fontsize{12pt}{15pt}\selectfont #1}%
+\newcommand{\oldB}[1]{\fontspec[Ligatures={Common}]{Didot}\fontsize{12pt}{15pt}\color{solarized@base02}\selectfont #1}%
+\newcommand{\tfont}[1]{\fontspec[Alternate=1,Ligatures={Common}]{Hoefler Text}\fontsize{12pt}{20pt}\selectfont #1}%
+\newcommand{\dfont}[1]{\fontspec[Ligatures={Common}]{Didot}\fontsize{12pt}{12pt}\selectfont #1}%
+
+% \newcommand{\minimize}{\mathop{\mathrm{minimize}}}
+\newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
+\newcommand{\argmax}{\mathop{\mathrm{arg\,max}}}
+\newcommand{\st}{\mathop{\mathrm{subject\,\,to}}}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt}
+
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+ BoldFont={LinLibertine_RB.otf},
+ ItalicFont={LinLibertine_RI.otf},
+ BoldItalicFont={LinLibertine_RBI.otf}
+ ]{LinLibertine_R.otf}
+
+
